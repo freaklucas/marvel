@@ -1,6 +1,7 @@
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.js';
+
 import App from './App';
-// import router from './router';
+
 import VueMaterial from 'vue-material';
 import 'vue-material/dist/vue-material.min.css';
 import VueRouter from 'vue-router'

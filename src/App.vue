@@ -1,23 +1,25 @@
 <template>
   <div id="app" class="md-layout">
     <div class="md-layout-item md-size-33" v-for="quadrinho in quadrinhos" :key="quadrinho.id">
-      <quadrinho
+      <Card
         :titulo="quadrinho.title"
         :descricao="quadrinho.description"
         :imagem="getImagem(quadrinho)"
-    ></quadrinho>
+    ></Card>
     </div>
   </div>
 </template>
 
 
 <script>
+
 import MarvelApi from '@/services/MarvelAPI';
-import Quadrinho from '@/components/Card';
+import Card from '@/components/Card';
+
 export default {
   name: 'App',
   components: {
-    Quadrinho
+    Card
   },
   data() {
     return {
@@ -38,6 +40,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style>

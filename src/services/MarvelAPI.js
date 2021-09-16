@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const urlBaseMarvel = 'https://gateway.marvel.com:443/v1/public/';
-const apiKey = 'CHAVE-PUBLICA-MARVEL-API';
+const urlBaseMarvel = 'http://gateway.marvel.com/v1/public';
+const apiKey = '9885974f46e5ea748379ca431a0f371b';
 
 export default {
     getAllComics: (limit, callback) => {
         const urlComics = urlBaseMarvel + 'comics?apikey=' + apiKey + '&limit=' + limit;
         axios.get(urlComics).then((comics) => {
-            if(callback) {
+            if (callback) {
                 callback(comics);
             }
         })
